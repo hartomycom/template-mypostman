@@ -70,19 +70,20 @@ const response = pm.response.json();
 
 /* DATA PARSING */
 function parseData(response, host) {
-    // const results = response.map(obj => [obj.title, obj.abstract, obj.published_date, obj.url]); // versi per nama key
-    const results = response.map(obj => Object.values(obj));
+  // const results = response.map(obj => [obj.title, obj.abstract, obj.published_date, obj.url]); // versi per nama key
+  const results = response.map(obj => Object.values(obj));
 
-    // const headers = ["TITLE", "ABSTRACT", "PUBLISHED DATE", "URL"]; // versi array
-    const headers = Array.from(
-      response.reduce((keys, cur) => {
-        for (const key of Object.keys(cur)) {
-          keys.add(key);
-        }
-        return keys;
-      }, new Set())
-    );
-    return [results, headers]
+  // const headers = ["TITLE", "ABSTRACT", "PUBLISHED DATE", "URL"]; // versi array
+  // const headers = ["TITLE", "ABSTRACT", "PUBLISHED DATE", "URL"]; // versi array
+  const headers = Array.from(
+    response.reduce((keys, cur) => {
+      for (const key of Object.keys(cur)) {
+        keys.add(key);
+      }
+      return keys;
+    }, new Set())
+  );
+  return [results, headers]
 }
 
 /* FEED DATA INTO TEMPLATE */
