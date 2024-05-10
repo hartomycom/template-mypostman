@@ -4,16 +4,16 @@ var template = `
 <style>
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700);
 #title{width:50%;margin:0 auto;text-align:center}
-body{font-family:'Open Sans',sans-serif;background-color: #202124;color: #fff;}
-table{width:100%;border-collapse:collapse;padding: 16px;font-size: 12px;color: #fff;}
-thead{background-color:#37474f;}
+body{font-family:'Open Sans',sans-serif;background-color: #1E1E1E;color: #FFFFFF;}
+table{width:100%;border-collapse:collapse;padding: 16px;font-size: 12px;color: #FFFFFF;}
+thead{background-color:#212121;}
 th,td,td:first-child,td:last-child,th:first-child,th:last-child{padding:12px 15px;}
-th{background-color:#546e7a;border: 1px solid #78909c;padding:1em .5em;text-align:center;}
-td{border: 1px solid #78909c;color:#fff;}
-tbody tr:nth-child(odd){background-color:#263238;transition:.3s;}
-tbody tr:nth-child(even){background-color:#37474f;transition:.3s;}
+th{background-color:#212121;border: 1px solid #424242;padding:1em .5em;text-align:center;}
+td{border: 1px solid #424242;color:#FFFFFF;}
+tbody tr:nth-child(odd){background-color:#333333;transition:.3s;}
+tbody tr:nth-child(even){background-color:#2C2C2C;transition:.3s;}
 tbody tr:hover{filter:brightness(90%);}
-.api{cursor:pointer;color: #b2dfdb;}
+.api{cursor:pointer;color: #00ADB5;}
 .api:active{color:#80cbc4;}
 </style>
 <script>
