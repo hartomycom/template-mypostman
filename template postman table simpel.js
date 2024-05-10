@@ -90,7 +90,10 @@ function parseData(response, host) {
 pm.visualizer.set(template, {
   // Variable template akan menerima respon dari data result dan header
   // .data adalah nama key array object untuk ditampilkan ke table
-  results: JSON.stringify(parseData(response.data)[0]),
+  // results: JSON.stringify(parseData(response.data)[0]),
+  results: JSON.stringify(parseData(response.data)[0].map(val => 
+    val.map(item => typeof item == 'object' ? JSON.stringify(item) : item ))
+  ),
   headers: JSON.stringify(parseData(response.data)[1]),
   host
 });
